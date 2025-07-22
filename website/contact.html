@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - News Hub</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="icon" href="newswebsitelogo.jpeg" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <h1 class="company">News Hub</h1>
+  </div>
+  <nav>
+    <a href="index.html" class="nav-links">Home</a>
+    <a href="about.html" class="nav-links">About Us</a>
+    <a href="contact.html" class="nav-links active">Contact</a>
+    <a href="privacy.html" class="nav-links">Privacy & Policy</a>
+    <a href="terms.html" class="nav-links">Terms & Conditions</a>
+  </nav>
+</header>
+
+<!-- MAIN CONTENT -->
+<main>
+  <section class="terms-container">
+    <h2>Contact Us</h2>
+
+    <p>If you have any questions, feedback, or suggestions, feel free to reach out. We'd love to hear from you.</p>
+
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" onsubmit="resetForm()">
+  <input type="hidden" name="access_key" value="69942873-4e95-4813-9610-41d085848192">
+
+  <h3 class="form-heading">Send us a message ✉️</h3>
+
+  <div class="form-row">
+    <label for="name">👤 Name</label>
+    <input type="text" id="name" name="name" placeholder="John Doe" required />
+  </div>
+
+  <div class="form-row">
+    <label for="email">📧 Email</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required />
+  </div>
+
+  <div class="form-row">
+    <label for="message">📝 Message</label>
+    <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+  </div>
+
+  <button type="submit">Send Message</button>
+</form>
+
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div id="logo">
+    <h1 id="company">News Hub</h1>
+    <p id="p">Your trusted source for daily news updates from around the world in multiple languages.</p>
+  </div>
+
+  <div class="link-tab">
+    <ul>
+      <li><h2 class="footerlink-heading">Categories</h2></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('politics')">Politics</a></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('business')">Business</a></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('technology')">Technology</a></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('sports')">Sports</a></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('entertainment')">Entertainment</a></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('health')">Health</a></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('world')">World</a></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('science')">Science</a></li>
+    </ul>
+    <ul>
+      <li><h2 class="footerlink-heading">Company</h2></li>
+      <li><a href="about.html" class="footerlink">About Us</a></li>
+      <li><a href="contact.html" class="footerlink">Contact</a></li>
+      <li><a href="privacy.html" class="footerlink">Privacy & Policy</a></li>
+      <li><a href="terms.html" class="footerlink">Terms & Conditions</a></li>
+    </ul>
+  </div>
+
+  <div class="copyright">
+    <p>&copy; <span id="year"></span> News Hub. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+
+  function resetForm() {
+    setTimeout(() => {
+      document.querySelector('.contact-form').reset();
+    }, 100); // delay needed to allow mailto to process
+  }
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+</script>
+
+</body>
+</html>

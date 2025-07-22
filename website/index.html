@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" href="newswebsitelogo.jpeg" />
+</head>
+<body>
+  <!-- Auto-load Propeller Ad (popup) -->
+  <script async src="https://propu.sh/pfe/current/tag.min.js?z=xxxxxxxxxx" data-cfasync="false"></script>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <h1 class="company">News Hub</h1>
+    </div>
+    <nav>
+      <a href="#" class="nav-links" onclick="fetchNewsByCategory('general')">Home</a>
+      <a href="#" class="nav-links" onclick="fetchNewsByCategory('business')">Business</a>
+      <a href="#" class="nav-links" onclick="fetchNewsByCategory('technology')">Technology</a>
+      <a href="#" class="nav-links" onclick="fetchNewsByCategory('sports')">Sports</a>
+      <a href="#" class="nav-links" onclick="fetchNewsByCategory('health')">Health</a>
+      <a href="#" class="nav-links" onclick="fetchNewsByCategory('entertainment')">Entertainment</a>
+      <div class="search">
+        <input id="searchInput" type="text" placeholder="Search..." />
+        <button onclick="searchNews()">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- LOADER -->
+  <div id="loader">Loading news...</div>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section id="news-section">
+      <h2>Latest News</h2>
+
+      <!-- In-Content Ad -->
+      <div style="text-align: center; margin: 20px auto;">
+        <script async src="https://propu.sh/pfe/current/tag.min.js?z=xxxxxxxxxx" data-cfasync="false"></script>
+      </div>
+
+      <div id="news-container"></div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div id="logo">
+      <h1 id="company">News Hub</h1>
+      <p id="p">Your trusted source for daily news updates from around the world in multiple languages.</p>
+    </div>
+
+    <div class="link-tab">
+      <ul>
+        <li><h2 class="footerlink-heading">Categories</h2></li>
+        <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('politics')">Politics</a></li>
+        <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('business')">Business</a></li>
+        <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('technology')">Technology</a></li>
+        <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('sports')">Sports</a></li>
+        <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('entertainment')">Entertainment</a></li>
+        <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('health')">Health</a></li>
+        <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('world')">World</a></li>
+        <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('science')">Science</a></li>
+      </ul>
+      <ul>
+        <li><h2 class="footerlink-heading">Company</h2></li>
+        <li><a href="about.html" class="footerlink">About Us</a></li>
+        <li><a href="contact.html" class="footerlink">Contact</a></li>
+        <li><a href="privacy.html" class="footerlink">Privacy & Policy</a></li>
+        <li><a href="terms.html" class="footerlink">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+    <div class="copyright">
+      <p>&copy; <span id="year"></span> News Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Show ad on article click (only once)
+    let adShown = false;
+    function showAdOnClick() {
+      if (adShown) return;
+      const ad = document.createElement('div');
+      ad.innerHTML = `
+        <div style="text-align:center; margin: 20px 0;">
+          <script async src="https://propu.sh/pfe/current/tag.min.js?z=xxxxxxxxxx" data-cfasync="false"></script>
+        </div>
+      `;
+      document.getElementById('news-section').prepend(ad);
+      adShown = true;
+    }
+  </script>
+  <script src="index.js"></script>
+</body>
+</html>

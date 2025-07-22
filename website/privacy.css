@@ -1,0 +1,172 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+/* HEADER */
+header {
+  background-color: #0d253f;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo h1.company {
+  font-size: 1.8rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.nav-links:hover,
+.nav-links.active {
+  background-color: #133b60;
+}
+
+/* MAIN CONTENT */
+main {
+  padding: 40px 20px;
+}
+
+.terms-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.terms-container h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #0d253f;
+  text-align: center;
+}
+
+.terms-container h3 {
+  margin-top: 25px;
+  color: #1e90ff;
+  font-size: 1.2rem;
+}
+
+.terms-container p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.terms-container a {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  background-color: #0d253f;
+  color: white;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+#logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+footer #logo h1,
+footer #logo p {
+  margin-bottom: 10px;
+}
+
+.link-tab {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+  padding: 20px 0;
+}
+
+.link-tab ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.footerlink-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footerlink {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+  transition: color 0.3s;
+}
+
+.footerlink:hover {
+  color: #00ffc3;
+  text-decoration: underline;
+  text-decoration-color: #00ffc3;
+}
+
+footer .copyright {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  border-top: 1px solid #2a4b6e;
+  padding-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+  }
+
+  .link-tab {
+    flex-direction: column;
+  }
+
+  .terms-container {
+    padding: 20px;
+  }
+
+  .terms-container h2 {
+    font-size: 1.6rem;
+  }
+}
