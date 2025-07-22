@@ -1,0 +1,91 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - News Hub</title>
+  <link rel="stylesheet" href="about.css" />
+  <link rel="icon" href="newswebsitelogo.jpeg" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <h1 class="company">News Hub</h1>
+  </div>
+  <nav>
+    <a href="index.html" class="nav-links">Home</a>
+    <a href="about.html" class="nav-links active">About Us</a>
+    <a href="contact.html" class="nav-links">Contact</a>
+    <a href="privacy.html" class="nav-links">Privacy & Policy</a>
+    <a href="terms.html" class="nav-links">Terms & Conditions</a>
+  </nav>
+</header>
+
+<!-- MAIN CONTENT -->
+<main>
+  <section class="terms-container">
+    <h2>About Us</h2>
+
+    <p>Welcome to <strong>News Hub</strong>, your trusted source for the latest and most relevant news from around the world. Our goal is to keep you informed, engaged, and empowered with accurate and timely information.</p>
+
+    <h3>Our Mission</h3>
+    <p>We aim to deliver real-time news that matters to you — across categories like Business, Technology, Politics, Sports, Entertainment, Health, and more. With a user-friendly experience, we ensure that reliable information is just a click away.</p>
+
+    <h3>What Makes Us Different</h3>
+    <p>News Hub is built for modern readers who value simplicity, speed, and trust. We offer:</p>
+    <ul>
+      <li>✅ Clean and ad-free reading</li>
+      <li>🌐 Multilingual news options</li>
+    </ul>
+
+    <h3>Our Vision</h3>
+    <p>We envision a future where every individual has access to unbiased, easy-to-read, and customizable news experiences. Whether you're a casual reader or a news junkie — News Hub is your daily companion.</p>
+
+    <h3>Get in Touch</h3>
+    <p>We’re always looking to improve. Share your feedback or suggestions at <a href="contact.html">support@newshub.com</a></p>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div id="logo">
+    <h1 id="company">News Hub</h1>
+    <p id="p">Your trusted source for daily news updates from around the world in multiple languages.</p>
+  </div>
+
+  <div class="link-tab">
+    <ul>
+      <li><h2 class="footerlink-heading">Categories</h2></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('politics')">Politics</a></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('business')">Business</a></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('technology')">Technology</a></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('sports')">Sports</a></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('entertainment')">Entertainment</a></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('health')">Health</a></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('world')">World</a></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('science')">Science</a></li>
+    </ul>
+    <ul>
+      <li><h2 class="footerlink-heading">Company</h2></li>
+      <li><a href="about.html" class="footerlink">About Us</a></li>
+      <li><a href="contact.html" class="footerlink">Contact</a></li>
+      <li><a href="privacy.html" class="footerlink">Privacy & Policy</a></li>
+      <li><a href="terms.html" class="footerlink">Terms & Conditions</a></li>
+    </ul>
+  </div>
+
+  <div class="copyright">
+    <p>&copy; <span id="year"></span> News Hub. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Dynamic Year Script -->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

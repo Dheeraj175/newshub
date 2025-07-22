@@ -1,0 +1,96 @@
+<!-- terms.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms & condition - News Hub</title>
+  <link rel="stylesheet" href="term.css">
+  <!-- Favicon (Optional) -->
+  <link rel="icon" href="newswebsitelogo.jpeg" />
+</head>
+<body>
+
+  <!-- HEADER -->
+<header>
+  <div class="logo">
+    <h1 class="company">News Hub</h1>
+  </div>
+  <nav>
+    <a href="index.html" class="nav-links">Home</a>
+    <a href="about.html" class="nav-links">About Us</a>
+    <a href="contact.html" class="nav-links">Contact</a>
+    <a href="privacy.html" class="nav-links">Privacy & Policy</a>
+    <a href="terms.html" class="nav-links">Terms & Conditions</a>
+  </nav>
+</header>
+
+
+  <!-- MAIN CONTENT -->
+<main>
+  <section class="terms-container">
+    <h2>Terms & Conditions</h2>
+
+    <p>Welcome to News Hub. By accessing and using this website, you accept the following terms and conditions. Please read them carefully.</p>
+
+    <h3>1. Acceptance of Terms</h3>
+    <p>By using News Hub, you agree to be bound by these Terms and Conditions, as well as our Privacy Policy. If you do not agree, please do not use this website.</p>
+
+    <h3>2. Use of Content</h3>
+    <p>All content provided on this website is for informational purposes only. You may not reuse, reproduce, or distribute the content without permission.</p>
+
+    <h3>3. User Responsibilities</h3>
+    <p>You are responsible for any activity that occurs under your use of the site. Misuse, abusive behavior, or unlawful activity may result in termination of access.</p>
+
+    <h3>4. Third-party Links</h3>
+    <p>This website may include links to third-party websites. We are not responsible for the content or accuracy of any external sites.</p>
+
+    <h3>5. Changes to Terms</h3>
+    <p>We reserve the right to modify these terms at any time. Continued use of the website after changes implies acceptance of the new terms.</p>
+
+    <h3>6. Contact Information</h3>
+    <p>If you have any questions about these Terms, please contact us at: <a href="contact.html">support@newshub.com</a></p>
+  </section>
+</main>
+
+
+<!-- FOOTER -->
+<footer>
+  <div id="logo">
+    <h1 id="company">News Hub</h1>
+    <p id="p">Your trusted source for daily news updates from around the world in multiple languages.</p>
+  </div>
+
+  <div class="link-tab">
+    <ul>
+      <li><h2 class="footerlink-heading">Categories</h2></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('politics')">Politics</a></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('business')">Business</a></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('technology')">Technology</a></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('sports')">Sports</a></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('entertainment')">Entertainment</a></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('health')">Health</a></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('world')">World</a></li>
+      <li><a href="#" class="footerlink" onclick="fetchNewsByCategory('science')">Science</a></li>
+    </ul>
+    <ul>
+      <li><h2 class="footerlink-heading">Company</h2></li>
+      <li><a href="about.html" class="footerlink">About Us</a></li>
+      <li><a href="contact.html" class="footerlink">Contact</a></li>
+      <li><a href="privacy.html" class="footerlink">Privacy & Policy</a></li>
+      <li><a href="terms.html" class="footerlink">Terms & Conditions</a></li>
+    </ul>
+  </div>
+
+  <div class="copyright">
+    <p>&copy; <span id="year"></span> News Hub. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Dynamic Year Script -->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
